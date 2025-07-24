@@ -4,16 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hype Culture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Outfit', sans-serif;
       background-color: #111;
       color: white;
     }
 
     header {
-      background-image: url('labubu-bg.png'); /* Your uploaded image */
+      background-image: url('labubu-bg.png');
       background-size: cover;
       background-position: center;
       text-align: center;
@@ -53,12 +54,12 @@
       margin-top: 30px;
     }
 
-    input, button {
+    input, select, textarea, button {
       display: block;
       margin: 10px 0;
       padding: 8px;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
     }
 
     button {
@@ -72,20 +73,24 @@
     button:hover {
       background-color: #ff00cc;
     }
+
+    h1, h2 {
+      font-family: 'Rubik Mono One', sans-serif;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Hype Culture</h1>
-    <p>The home of Labubu, Yeezys, Crybabies and chaos 🐵</p>
+    <p>The home of LABUBU, YEEZY, CRYBABY and chaos 🐵</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#shop">Shop</a>
     <a href="#help">Help</a>
-    <a href="#signin">Sign In</a>
   </nav>
 
   <section id="about">
@@ -93,42 +98,61 @@
     <p>
       Hype Shark started from a garage with nothing but passion, a few pairs of Yeezys, and a dream.
       Over time, we grew into a warehouse full of sought-after collectibles — from Labubu plush toys
-      to Cry Baby figurines and rare sneakers. If it's trending, we probably have it (or pranked you into thinking we do).
+      to Cry Baby figurines and rare sneakers. If it's trending, we probably have it.
     </p>
   </section>
 
   <section id="shop">
     <h2>Shop</h2>
-    <p>This is a prank site. Nothing here is actually for sale. Gotcha 😜</p>
+    <p>
+      Our online shop is currently under development. Meanwhile, we're building hype around our brand —
+      and giving you the chance to win some exclusive items by entering our Lucky Draw below! :)
+    </p>
   </section>
 
   <section id="help">
     <h2>Help</h2>
-    <p>Need help? Try refreshing your page. Or don't. This is just for laughs 🤡</p>
-  </section>
-
-  <section id="signin">
-    <h2>Sign In</h2>
-    <p>Just kidding. There's no account here. You're already in 😉</p>
+    <p>Need help? Try refreshing your page.</p>
   </section>
 
   <section class="lucky-draw">
-    <h2>🎁 Lucky Draw: Win a Labubu!</h2>
-    <p>Answer all questions correctly and win 1 Labubu plush mailed to your doorstep! (Prank!)</p>
+    <h2>🎁 Lucky Draw: Win a Hype item of your choice!</h2>
+    <p>
+      Answer all questions and win 1 hype item mailed to your doorstep!
+      We're giving away 10 hype items to selected winners.
+    </p>
     <form>
-      <label>1. What color is the original Labubu?</label>
-      <input type="text" name="q1" />
+      <label>1. What is your hype item?</label>
+      <select name="q1">
+        <option value="SKULLPANDA">SKULLPANDA</option>
+        <option value="Yeezy">Yeezy</option>
+        <option value="CRYBABY">CRYBABY</option>
+        <option value="PUCKY">PUCKY</option>
+        <option value="SKULLPANDA2">SKULLPANDA</option>
+        <option value="LABUBU">LABUBU</option>
+      </select>
 
-      <label>2. What brand made Yeezys?</label>
+      <label>2. What is your favourite colour?</label>
       <input type="text" name="q2" />
 
-      <label>3. Which figure is known for crying all the time?</label>
-      <input type="text" name="q3" />
+      <label>3. In less than 50 words, tell us why you want the item above:</label>
+      <textarea name="q3" rows="4" maxlength="300"></textarea>
 
-      <label>4. Spell "Hype Culture" backwards:</label>
-      <input type="text" name="q4" />
+      <label>4. Email address</label>
+      <input type="email" name="q4" required />
+      <p style="font-size: 0.9em; color: #ccc;">
+        We are only allowed to collect one form of contact info due to Privacy Act regulations in Australia.
+        Please ensure your email is correct — winning results will be sent via email and published on 25th July 2025 before 11PM AEDT.
+        Cut-off time for submission is 9PM AEDT on the same day.
+      </p>
 
-      <button type="submit">Submit Answers</button>
+      <label>5. Full name</label>
+      <input type="text" name="q5" required />
+
+      <label>6. Mailing address</label>
+      <textarea name="q6" rows="3" required></textarea>
+
+      <button type="submit">Submit My Entry</button>
     </form>
   </section>
 
