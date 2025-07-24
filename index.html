@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hype Culture</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://i.imgur.com/G8SrnYB.jpg') center/cover no-repeat;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .quiz input {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+    }
+    .quiz button {
+      padding: 10px 20px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#shop">Shop</a>
+      <a href="#help">Help</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Hype Culture</h1>
+    <p>The Ultimate Labubu & Trend Toy Plug</p>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Hype Shark</h2>
+    <p>
+      Born in a garage with nothing but passion, Hype Shark grew from a collector’s dream into a thriving warehouse of the coolest, weirdest, and rarest items in pop culture. From Yeezys to Cry Babies, from Labubu plushies to limited-edition sneakers — we don’t just sell hype, we live it.
+    </p>
+  </div>
+
+  <div id="shop" class="section">
+    <h2>Shop (Coming Soon)</h2>
+    <p>We’re cooking something spicy. Check back soon!</p>
+  </div>
+
+  <div id="help" class="section">
+    <h2>Need Help?</h2>
+    <p>DM us on Instagram @hype.shark or email help@hypeculture.com</p>
+  </div>
+
+  <div class="section">
+    <h2>🎁 Lucky Draw: Win a Labubu!</h2>
+    <p>Answer all questions correctly and you might win a Labubu mailed directly to you!</p>
+    
+    <div class="quiz">
+      <form onsubmit="event.preventDefault(); checkAnswers();">
+        <label>1. What animal is Labubu inspired by?</label>
+        <input id="q1" type="text" required />
+
+        <label>2. Who created Labubu?</label>
+        <input id="q2" type="text" required />
+
+        <label>3. What’s another toy we sell besides Labubu?</label>
+        <input id="q3" type="text" required />
+
+        <button type="submit">Submit</button>
+        <p id="result"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Hype Culture. All rights reserved.
+  </footer>
+
+  <script>
+    function checkAnswers() {
+      const q1 = document.getElementById("q1").value.toLowerCase();
+      const q2 = document.getElementById("q2").value.toLowerCase();
+      const q3 = document.getElementById("q3").value.toLowerCase();
+
+      if (
+        q1.includes("monkey") || q1.includes("creature") &&
+        q2.includes("kasing lung") &&
+        (q3.includes("yeezys") || q3.includes("cry baby") || q3.includes("sneaker"))
+      ) {
+        document.getElementById("result").textContent = "🎉 Correct! You’re entered in the draw!";
+        document.getElementById("result").style.color = "green";
+      } else {
+        document.getElementById("result").textContent = "❌ Try again!";
+        document.getElementById("result").style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
