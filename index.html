@@ -2,139 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hype Culture</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
     }
+
     header {
-      background-color: #1a1a1a;
-      color: white;
-      padding: 20px;
+      background-image: url('labubu-bg.png'); /* Your uploaded image */
+      background-size: cover;
+      background-position: center;
       text-align: center;
-    }
-    nav a {
+      padding: 100px 20px;
       color: white;
-      margin: 0 15px;
-      text-decoration: none;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
       font-weight: bold;
     }
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: url('https://i.imgur.com/G8SrnYB.jpg') center/cover no-repeat;
-      color: white;
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-    .hero h1 {
-      font-size: 3em;
+
+    nav a:hover {
+      color: #f0c;
     }
-    .section {
+
+    section {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
-    .quiz input {
+
+    .lucky-draw {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    input, button {
       display: block;
       margin: 10px 0;
-      width: 100%;
       padding: 8px;
+      width: 100%;
+      max-width: 400px;
     }
-    .quiz button {
-      padding: 10px 20px;
-      background-color: #ff4d4d;
-      color: white;
+
+    button {
+      background-color: #f0c;
+      color: #111;
+      font-weight: bold;
       border: none;
       cursor: pointer;
-      font-weight: bold;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      color: white;
+
+    button:hover {
+      background-color: #ff00cc;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#shop">Shop</a>
-      <a href="#help">Help</a>
-      <a href="#">Sign In</a>
-    </nav>
+    <h1>Hype Culture</h1>
+    <p>The home of Labubu, Yeezys, Crybabies and chaos 🐵</p>
   </header>
 
-  <div class="hero">
-    <h1>Hype Culture</h1>
-    <p>The Ultimate Labubu & Trend Toy Plug</p>
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#shop">Shop</a>
+    <a href="#help">Help</a>
+    <a href="#signin">Sign In</a>
+  </nav>
 
-  <div id="about" class="section">
+  <section id="about">
     <h2>About Hype Shark</h2>
     <p>
-      Born in a garage with nothing but passion, Hype Shark grew from a collector’s dream into a thriving warehouse of the coolest, weirdest, and rarest items in pop culture. From Yeezys to Cry Babies, from Labubu plushies to limited-edition sneakers — we don’t just sell hype, we live it.
+      Hype Shark started from a garage with nothing but passion, a few pairs of Yeezys, and a dream.
+      Over time, we grew into a warehouse full of sought-after collectibles — from Labubu plush toys
+      to Cry Baby figurines and rare sneakers. If it's trending, we probably have it (or pranked you into thinking we do).
     </p>
-  </div>
+  </section>
 
-  <div id="shop" class="section">
-    <h2>Shop (Coming Soon)</h2>
-    <p>We’re cooking something spicy. Check back soon!</p>
-  </div>
+  <section id="shop">
+    <h2>Shop</h2>
+    <p>This is a prank site. Nothing here is actually for sale. Gotcha 😜</p>
+  </section>
 
-  <div id="help" class="section">
-    <h2>Need Help?</h2>
-    <p>DM us on Instagram @hype.shark or email help@hypeculture.com</p>
-  </div>
+  <section id="help">
+    <h2>Help</h2>
+    <p>Need help? Try refreshing your page. Or don't. This is just for laughs 🤡</p>
+  </section>
 
-  <div class="section">
+  <section id="signin">
+    <h2>Sign In</h2>
+    <p>Just kidding. There's no account here. You're already in 😉</p>
+  </section>
+
+  <section class="lucky-draw">
     <h2>🎁 Lucky Draw: Win a Labubu!</h2>
-    <p>Answer all questions correctly and you might win a Labubu mailed directly to you!</p>
-    
-    <div class="quiz">
-      <form onsubmit="event.preventDefault(); checkAnswers();">
-        <label>1. What animal is Labubu inspired by?</label>
-        <input id="q1" type="text" required />
+    <p>Answer all questions correctly and win 1 Labubu plush mailed to your doorstep! (Prank!)</p>
+    <form>
+      <label>1. What color is the original Labubu?</label>
+      <input type="text" name="q1" />
 
-        <label>2. Who created Labubu?</label>
-        <input id="q2" type="text" required />
+      <label>2. What brand made Yeezys?</label>
+      <input type="text" name="q2" />
 
-        <label>3. What’s another toy we sell besides Labubu?</label>
-        <input id="q3" type="text" required />
+      <label>3. Which figure is known for crying all the time?</label>
+      <input type="text" name="q3" />
 
-        <button type="submit">Submit</button>
-        <p id="result"></p>
-      </form>
-    </div>
-  </div>
+      <label>4. Spell "Hype Culture" backwards:</label>
+      <input type="text" name="q4" />
 
-  <footer>
-    &copy; 2025 Hype Culture. All rights reserved.
-  </footer>
-
-  <script>
-    function checkAnswers() {
-      const q1 = document.getElementById("q1").value.toLowerCase();
-      const q2 = document.getElementById("q2").value.toLowerCase();
-      const q3 = document.getElementById("q3").value.toLowerCase();
-
-      if (
-        q1.includes("monkey") || q1.includes("creature") &&
-        q2.includes("kasing lung") &&
-        (q3.includes("yeezys") || q3.includes("cry baby") || q3.includes("sneaker"))
-      ) {
-        document.getElementById("result").textContent = "🎉 Correct! You’re entered in the draw!";
-        document.getElementById("result").style.color = "green";
-      } else {
-        document.getElementById("result").textContent = "❌ Try again!";
-        document.getElementById("result").style.color = "red";
-      }
-    }
-  </script>
+      <button type="submit">Submit Answers</button>
+    </form>
+  </section>
 
 </body>
 </html>
